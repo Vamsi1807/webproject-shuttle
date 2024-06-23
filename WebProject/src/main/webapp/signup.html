@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+<style>
+	body{
+		background-image:url("images/shuttle.jpeg");
+		background-position:center;
+		background-size:100% 100%;
+		background-attachment:fixed;
+		
+		
+	}
+	.cen{
+		width:500px;
+		height:450px;
+		background-color:rgb(163, 168, 227);
+		opacity:0.5;
+		text-align:center;
+		margin:auto;
+		margin-top:140px;
+		border-radius:8px;
+	}
+	.data{
+		position: fixed;  /* Ensures centering within viewport */
+  		top: 50%;  /* Positions the top at 50% viewport height */
+  		left: 50%;  /* Positions the left at 50% viewport width */
+  		transform: translate(-50%, -50%);  /* Adjusts position for centering */
+  		display: flex;    /* Enable Flexbox for centering */
+  		/* Center elements horizontally */
+  		align-items: center; 
+	}
+	.input{
+		width:250px;
+		height:20px;
+		border-radius:3px;
+		border:none;
+	}
+	.buttons{
+		padding:5px;
+		width:60px;
+		color:white;
+		background-color:rgb(63, 143, 241);
+		border:none;
+		border-radius:3px;
+	}
+	.buttons:hover{
+		cursor:pointer;
+		background-color: rgb(113, 168, 236);
+		font-family: Roboto, sans-serif;
+		
+	}
+	.space{
+		display:flex;
+		flex-direction:row;
+		justify-content:space-around;
+	}
+</style>
+</head>
+<body>
+	<div class="cen"></div>
+	<div class="data">
+		<form action="userDetails.jsp" method="post">
+			<i class="fas fa-envelope"></i>
+			<input type="email" placeholder="Enter your email" class="input" name="email"><br><br>
+			<i class="fas fa-lock"></i>
+			<input type="password" placeholder="Enter your password" class="input" name="pwd1"><br><br>
+			<i class="fas fa-lock"></i>
+			<input type="password" placeholder="Confirm your password" class="input" name="pwd2"><br><br>
+			<i class="fas fa-user"></i>
+			<input type="text" placeholder="Enter your username(5-10 chars)" class="input" name="uname"><br><br>
+			<input type="radio" name="gender" value="Male" class="gender">
+			<label for="male">Male</label>
+			<input type="radio" name="gender" value="Female" class="gender">
+			<label for="female">Female</label>
+			<input type="radio" name="gender" value="Others" class="gender">
+			<label for="others">Others</label><br><br>
+			Birth date : <input type="date" id="birthday" name="birthday" class="input"><br><br>
+			Select a question : 
+			<select id="question" class="input" name="question">
+				<option value="">Select a question..</option>
+    			<option value="What is your favourite place?">What is your favourite place?</option>
+    			<option value="Where you were born?">Where you were born?</option>
+    			<option value="What is your pet's name?">What is your pet's name?</option>
+  			</select><br><br>
+  			Enter the answer : <input type="text" class="input" name="answer"><br><br>
+  			<div class="space">
+  				<input type="reset" class="buttons">
+  				<input type="submit" class="buttons">
+  			</div>
+		</form>
+	</div>
+</body>
+</html>
